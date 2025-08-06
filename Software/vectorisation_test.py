@@ -4,10 +4,6 @@ from langchain_community.vectorstores import FAISS
 from langchain.docstore.document import Document
 from pathlib import Path
 
-
-# Definiranje početnih vrijednosti
-
-# Putanja da 
 path_to_datasets = Path("datasets")
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
 splitter = RecursiveCharacterTextSplitter(
