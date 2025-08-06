@@ -11,7 +11,8 @@
 # Specific folders
 vectorised_dataset
 venv
-README.md
+*.md
+offload
 
 # User-specific files
 *.rsuser
