@@ -20,6 +20,10 @@ Naziv biblioteke | Dokumentacija
 langchain_community | [https://python.langchain.com/api_reference/community/index.html](https://python.langchain.com/api_reference/community/index.html) 
 transformers | [https://huggingface.co/docs/transformers/en/index](https://huggingface.co/docs/transformers/en/index)
 torch | [https://pypi.org/project/torch/](https://pypi.org/project/torch/)
+faiss-cpu | [https://pypi.org/project/faiss-cpu/](https://pypi.org/project/faiss-cpu/)
+faiss-gpu | [https://pypi.org/project/faiss-gpu/#description](https://pypi.org/project/faiss-gpu/#description)
+sentence-transformers | [https://sbert.net/](https://sbert.net/)
+accelerate | [https://huggingface.co/docs/accelerate/en/index](https://huggingface.co/docs/accelerate/en/index)
 
 Skupovi podataka su prošireni i generirani uz pomoć ChatGPT-a kako bi se ubrzao proces izgradnje aplikacije.
 
