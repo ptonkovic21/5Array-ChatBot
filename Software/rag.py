@@ -2,7 +2,6 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 import torch
-# torch.cuda.empty_cache()
 
 model_name_ai = "deepseek-ai/deepseek-llm-7b-chat"
 model_name_embedding = "sentence-transformers/all-mpnet-base-v2"
@@ -47,7 +46,7 @@ def ask(question: str):
     input_tensor = tokenizer.apply_chat_template(
         messages, 
         add_generation_prompt=True, 
-        return_tensors="pt")#.to(model.device)
+        return_tensors="pt")
     
     outputs = model.generate(
         input_tensor.to(model.device), 
