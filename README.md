@@ -8,7 +8,7 @@ Bilo koji 8Gb GPU <br>
 16Gb - RAM <br>
 20Gb slobodnog prostora <br>
 
-Moguće je pokrenuti na ovim specifikacijama:
+Moguće je pokrenuti na ovim specifikacijama: <br>
 gtx 1650 4Gb - GPU <br>
 16Gb RAM <br>
 Ryzen 5 4000 Series - CPU <br>
