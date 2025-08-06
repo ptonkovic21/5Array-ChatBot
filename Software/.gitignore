@@ -10,6 +10,7 @@
 
 # Specific folders
 vectorised_dataset
+venv
 
 # User-specific files
 *.rsuser
