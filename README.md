@@ -1,33 +1,34 @@
-# Inicijalne upute za izradu zadaća
-Poštovane kolegice i kolege, 
+# Dobrodošli
+Na ovom repozitoriju se nalazi jednostavan robot za razgovor koji koristi RAG pristup kao primarni izvor informacija. Glavni model koji se koristi je deepseek-llm-7b-chat. 
 
-čestitamo vam jer ste uspješno kreirali **repozitorij** koji ćete koristiti za izradu vašeg projekta, tj. za pisanje vaših triju zadaća. To će uključivati izradu dokumentacije i programskog kôda.
+# Potrebne specifikacije
+8Gb GPU
+16Gb RAM
+20Gb slobodnog prostora
 
-Molim vas izmijenite ovaj dokument kako biste u njemu naveli naziv i kratak opis projekta koji obrađujete u vašim zadaćama, kao i vaše osobne podatke. Za upute o sintaksi koju možete koristiti u ovom dokumentu i kod pisanja vaše projektne dokumentacije obavezno pogledajte upute o sintaksi koje su dostupne na Moodleu, a dodatno i [ovaj link](https://guides.github.com/features/mastering-markdown/).
+Moguće je pokrenuti na ovim specifikacijama:
+gtx 1650 4Gb - GPU
+16Gb RAM
+Ryzen 5 4000 Series - CPU
+Ali performanse su jako spore i potrebno je do 4 min za odgovor.
 
-A sada, vrijeme je za prvi korak rada na vašem projektu. 🙂 Za upis/opis vašeg programskog proizvoda molimo vas koristite **predložak** koji je naveden u nastavku. Započnite tako da kliknete na *olovku* u desnom gornjem kutu ovoga dokumenta te izbrišite sve što je iznad _Naziva projekta_, kao i sve upute koje su navedene u zagradama u predlošku ispod.
+# Dodatne informacije
+Potrebni paketi i biblioteke koje se koriste u projektu su:
 
-# Naziv projekta
-(U redak iznad navedite naziv projekta koji ste dobili za analizu!)
+Naziv biblioteke | Dokumentacija 
+------------  | ------------------- 
+langchain_community | [https://python.langchain.com/api_reference/community/index.html](https://python.langchain.com/api_reference/community/index.html) 
+transformers | [https://huggingface.co/docs/transformers/en/index](https://huggingface.co/docs/transformers/en/index)
+torch | [https://pypi.org/project/torch/](https://pypi.org/project/torch/)
 
-## Podaci o studentu
-(Ispod promijenite samo drugi redak tablice!)
+Skupovi podataka su prošireni i generirani uz pomoć ChatGPT-a kako bi se ubrzao proces izgradnje aplikacije.
 
-Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
-------------  | ------------------- | ----- | ---------------------
-Ime i prezime | mojaadresa@foi.hr | 000000000 | githubuser
-
-
-## Opis domene
-(Vlastitim riječima opišite domenu ili problem koji pokriva projekt vaše zadaće!)
-
-## Specifikacija projekta
-(Vlastitim riječima opišite zahtjeve za izradu ovog programskog proizvoda!)
-
-## Zadatak
-(U root repozitorija učitajte zadatak koji ste dobili i potom ovdje stavite link na njegovo otvaranje!)
-
-## Resursi
-(Zadaće je obvezno predati u obliku Wiki stranica na ovom repozitoriju. Slike i druge artefakte koje ćete koristiti na wiki stranicama smjestite u mapu dokumentacije u repozitoriju!)
-
-Svi resursi nalaze se u mapi _Documentation_.
+Početni izgled podataka | Izgled nakon proširenja uz ChatGPT
+----------------------  |  ---------------------------------
+Marko
+--Birthday is on 9.01.2002
+--Favorite color is yellow
+--Pet name is Bruice
+--Favorite thing is playing games
+--Favorite food is pasta
+--Favorite drink is Sprite | asf
