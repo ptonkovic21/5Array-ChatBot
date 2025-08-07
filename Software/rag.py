@@ -24,7 +24,7 @@ model = AutoModelForCausalLM.from_pretrained(
     # Koristiti ovo u slučaju da imate slabo računalo 
     # Podesite po vašim mogućnostima
 
-    max_memory={0: "2000MiB", "cpu": "10GB"},
+    max_memory={0: "1500MiB", "cpu": "8GB"},
     offload_folder="./offload"
 )
 
