@@ -1,15 +1,15 @@
 from rag import ask
+from fastapi import FastAPI
+from pydantic import BaseModel
 
+app = FastAPI()
 
-print('\n\n\n')
-print("5Array: " + "Hello, my name is 5Array and I'm here to help you. Ask me anything you want!")
-print('\n')
+class Query(BaseModel):
+    question: str
 
-while True:
-    prompt = input("User: ")
-    
-    if prompt.strip().lower() == "/exit" or prompt.strip().lower() == "/quit" or prompt.strip().lower() == 'bye':
-        print("5Array: Goodbye!")
-        break
-    
-    print("\n5Array: " + ask(prompt) + "\n")
+@app.post("/ask")
+async def ask_endpoint(query: Query):
+    print("User: " + query.question + "\n")
+    answer = ask(query.question)
+    print("5Array: " + answer + '\n')
+    return {"answer":answer}
