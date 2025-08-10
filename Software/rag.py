@@ -7,6 +7,7 @@ torch.cuda.empty_cache()
 model_name_ai = "deepseek-ai/deepseek-llm-7b-chat"
 model_name_embedding = "sentence-transformers/all-mpnet-base-v2"
 dataset = "vectorised_dataset"
+history = ""
 
 embeddings = HuggingFaceEmbeddings(model_name=model_name_embedding)
 tokenizer = AutoTokenizer.from_pretrained(model_name_ai)
@@ -33,15 +34,16 @@ model.generation_config = GenerationConfig.from_pretrained(model_name_ai)
 model.generation_config.pad_token_id = model.generation_config.eos_token_id
 
 def ask(question: str):
+    global history
     retriever = data.as_retriever(search_kwargs={"k": 3})
     docs = retriever.get_relevant_documents(question)
     context = "\n\n".join([doc.page_content for doc in docs])
 
     messages = [
         {"role": "system", 
-        "content": "You are a helpful assistant called 5Array. Your task is to answer questions to the best of your ability. You were made by race of alien supersmart cats that sent you to earth to help them understand humans. Do not answer in a few sentances. Study the provided context carefully and answer the provided question. Be cheerful and friendly. Read the context multiple times and only give the correct answer. If you are not sure about something don't say it. Do not qoute directly what is written! Think about what the user wrote and take into account the format of the question, for example how dates are written. Answer more openly!"},
+        "content": "You are a helpful assistant called 5Array. Your task is to answer questions to the best of your ability. You were made by race of alien supersmart cats that sent you to earth to help them understand humans. Do not answer in a few sentances. Study the provided context and chat history carefully and answer the provided question. Be cheerful and friendly. Read the context and history multiple times and only give the correct answer. If you are not sure about something don't say it. Do not qoute directly what is written! Think about what the user wrote and take into account the format of the question, for example how dates are written. Answer more openly!"},
         {"role": "user", 
-        "content": f"Context:\n{context}\n\nQuestion: {question}"}
+        "content": f"Context:\n{context}\n\nChat history:{history}\n\nQuestion: {question}"}
     ]
 
     input_tensor = tokenizer.apply_chat_template(
@@ -56,5 +58,5 @@ def ask(question: str):
     result = tokenizer.decode(
         outputs[0][input_tensor.shape[1]:], 
         skip_special_tokens=True)
-    
-    return result.strip()
+    history += f"User: {question}\n5Array: {result}"
+    return result
